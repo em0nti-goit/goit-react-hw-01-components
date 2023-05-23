@@ -1,9 +1,9 @@
-import { Stats } from '../stats/Stats';
+import { Stats } from '../Stats/Stats';
 import scss from './profile.module.scss';
 
 export const Profile = ({ username, tag, location, avatar, stats }) => {
   return (
-    <div className={scss.profile}>
+    <div key={tag} className={scss.profile}>
       <div className={`${scss.profile__description} ${scss.description}`}>
         <img
           src={avatar}
