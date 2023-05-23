@@ -1,0 +1,37 @@
+.stats {
+  list-style: none;
+
+  display: flex;
+  width: 100%;
+
+  background-color: #f4f8fb;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: calc(100% / 3);
+    row-gap: 4px;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    border-top: 1px solid #dedfe1;
+
+    &:not(:last-child) {
+      border-right: 1px solid #dedfe1;
+    }
+  }
+
+  &__label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #9e9ea1;
+  }
+
+  &__quantity {
+    font-size: 16px;
+    font-weight: 700;
+    color: #121212;
+  }
+}
