@@ -1,4 +1,5 @@
 import css from './FriendListItem.module.scss';
+import PropTypes from 'prop-types';
 
 export const FriendListItem = ({ avatar, name, isOnline }) => {
   let statusClass = isOnline
@@ -6,7 +7,7 @@ export const FriendListItem = ({ avatar, name, isOnline }) => {
     : css.item__status_offline;
 
   return (
-    <li className="item">
+    <li className={css.item}>
       <span className={`${css.item__status} ${statusClass}`}></span>
       <img
         className={css.item__avatar}
@@ -18,4 +19,10 @@ export const FriendListItem = ({ avatar, name, isOnline }) => {
       <p className={css.item__name}>{name}</p>
     </li>
   );
+};
+
+FriendListItem.propTypes = {
+  avatar: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  isOnline: PropTypes.bool.isRequired,
 };
