@@ -1,5 +1,6 @@
 import { Stats } from '../Stats/Stats';
 import scss from './profile.module.scss';
+import PropTypes from 'prop-types';
 
 export const Profile = ({ username, tag, location, avatar, stats }) => {
   return (
@@ -25,4 +26,12 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
       <Stats {...stats} />
     </div>
   );
+};
+
+Profile.propTypes = {
+  username: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired,
+  stats: PropTypes.object.isRequired,
 };

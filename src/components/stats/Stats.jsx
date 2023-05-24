@@ -1,4 +1,5 @@
 import scss from './stats.module.scss';
+import PropTypes from 'prop-types';
 
 export const Stats = ({ followers, views, likes }) => {
   return (
@@ -17,4 +18,10 @@ export const Stats = ({ followers, views, likes }) => {
       </li>
     </ul>
   );
+};
+
+Stats.propTypes = {
+  followers: PropTypes.number.isRequired,
+  views: PropTypes.number.isRequired,
+  likes: PropTypes.number.isRequired,
 };
