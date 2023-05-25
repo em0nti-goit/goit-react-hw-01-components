@@ -6,7 +6,7 @@ import { setColorClass } from 'utils/class-utils';
 export const Statistics = ({ stats, title = null }) => {
   return (
     <section className={scss.statistics}>
-      {title ? <h2 className={scss.title}>{title}</h2> : null}
+      {title && <h2 className={scss.title}>{title}</h2>}
 
       <ul className={scss.list}>
         {stats.map(item => {
