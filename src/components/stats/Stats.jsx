@@ -1,5 +1,5 @@
-import scss from './Stats.module.scss';
 import PropTypes from 'prop-types';
+import scss from './Stats.module.scss';
 
 export const Stats = ({ followers, views, likes }) => {
   return (

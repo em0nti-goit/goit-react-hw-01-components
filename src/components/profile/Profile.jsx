@@ -1,6 +1,6 @@
-import { Stats } from 'components/Stats/Stats';
-import scss from './Profile.module.scss';
 import PropTypes from 'prop-types';
+import scss from './Profile.module.scss';
+import { Stats } from 'components/Stats/Stats';
 
 export const Profile = ({ username, tag, location, avatar, stats }) => {
   return (
